@@ -39,12 +39,15 @@ namespace Unit3.Game{
             Console.WriteLine(selectedWord);
         }
 
-        public void checkUserInput(char userInput){
+        public bool checkUserInput(char userInput){
             if (selectedWord.Contains(userInput)){
                 int wordIndex = selectedWord.IndexOf(userInput);
                 // call caleb's method
                 Console.WriteLine(wordIndex);
                 Console.WriteLine(selectedWord[wordIndex]);
+                return true;
+            }else{
+                return false;
             }
         }
     }
