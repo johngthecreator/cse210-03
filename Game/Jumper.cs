@@ -1,10 +1,9 @@
 namespace Unit3.Game{
     class Jumper{
-        // Keep tack of score, get input from user.
         private int lifePoints = 5;
+
         public void readUserInput(){ 
-        Word check = new Word();
-            // Ask user to guess a letter
+            Word check = new Word();
             Console.Write("Guess a letter [a-z]:");
 
             try{
