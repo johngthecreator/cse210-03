@@ -40,13 +40,14 @@ namespace Unit3.Game{
         }
 
         public bool checkUserInput(char userInput){
+            Display dis = new Display();
             if (selectedWord.Contains(userInput)){
                 int wordIndex = selectedWord.IndexOf(userInput);
-                // call caleb's method
-                Console.WriteLine(wordIndex);
-                Console.WriteLine(selectedWord[wordIndex]);
+                dis.setWordList(wordIndex, selectedWord[wordIndex]);
+                dis.displayDude();
                 return true;
             }else{
+                dis.displayDude();
                 return false;
             }
         }
