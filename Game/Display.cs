@@ -12,71 +12,101 @@ namespace Unit3.Game{
                 Console.Write(letters);
             }
         }
+
+        public void winDisplay(){
+            Console.WriteLine("You win!");
+        }
       
-        public void displayDude(){
-              Jumper life = new Jumper();
-              switch(life.getLifePoints())
+        public void displayDude(int lifePoints){
+              
+              switch(lifePoints)
                   {
-                    case 5:
+                    case 0:
+                    
+                          Console.WriteLine(@"
+                          /   /
+                         x ---
+                          \   \
+                         ^^^^^^^^");
+                              break;                   
+                      case 1:
                           printWordList();
                           Console.WriteLine(@"
-                            -----
-                          /     \
-                            -----
-                          \     /
-                            \   /
-                              0
-                            / | \
-                            /  \     
-                          ^^^^^^^");    
-                        break;
-                    case 4:
-                          printWordList();
-                          Console.WriteLine(@"
-                          /     \
-                            -----
-                          \     /
-                            \   /
-                              0
-                            / | \
-                            /  \
-                            
-                          ^^^^^^^");
-                              break;
-                        
-                    case 3:
-                          printWordList();
-                          Console.WriteLine(@"
-                            -----
-                          \     /
-                            \   /
-                              0
-                            / | \
-                            /  \
-                            
-                          ^^^^^^^");
-                              break;
-                    case 2:
-                          printWordList();
-                          Console.WriteLine(@"
-                          \     /
-                            \   /
-                              0
-                            / | \
-                            /  \
-                            
-                          ^^^^^^^");
-                              break;
-                    case 1:
-                          printWordList();
-                          Console.WriteLine(@"
-                            \   /
-                              0
-                            / | \
-                            /  \
+                           \   /
+                             0
+                           / | \
+                            / \
                             
                           ^^^^^^^");
                           break;
+                      case 2:
+                          printWordList();
+                          Console.WriteLine(@"
+                          
+                          \     /
+                           \   /
+                             0
+                           / | \
+                            / \     
+                            
+                          ^^^^^^^");
+                              break;
+                      case 3:
+                          printWordList();
+                          Console.WriteLine(@"
+                           
+                        
+                         | _____ |
+                          \     /
+                           \   /
+                             0
+                           / | \
+                            / \     
+                            
+                          ^^^^^^^");
+                              break;
+                      case 4:
+                          printWordList();
+                          Console.WriteLine(@"
+                           
+                          /     \
+                         | _____ |
+                          \     /
+                           \   /
+                             0
+                           / | \
+                            / \     
+                            
+                          ^^^^^^^");
+                              break;
+                      case 5:
+                          printWordList();
+                          Console.WriteLine(@"
+                           _____
+                          /     \
+                         | _____ |
+                          \     /
+                           \   /
+                             0
+                           / | \
+                            / \     
+                          ^^^^^^^");    
+                        break;
+
+                      default:
+                          Console.WriteLine(@"
+                          ~~~~~~~
+                           _____        *****
+                          /     \     **     **
+                         | _____ |      *****
+                          \     /
+                           \   /
+                             0
+                           / | \
+                            / \     
+                          ^^^^^^^");
+                          break;
+                      
                     // case 4:
                     //       printWordList();
                     //       Console.WriteLine(@"
@@ -86,15 +116,7 @@ namespace Unit3.Game{
                             
                     //       ^^^^^^^");
                     //           break;
-                    // case 3:
-                    //       printWordList();
-                    //       Console.WriteLine(@"
-                    //           x
-                    //         / | \
-                    //         /  \
-                            
-                    //       ^^^^^^^");
-                    //           break;
+
                   }
           }
     }

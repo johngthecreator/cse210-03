@@ -3,10 +3,11 @@ using System.Collections.Generic;
 namespace Unit3.Game{
     class Word{
         private string selectedWord = "";
-        private void setSelectedWord(string genWord){
+        private string setSelectedWord(string genWord){
             selectedWord = genWord;
+            return selectedWord;
         }
-        public void selectRandomWord(){
+        public string selectRandomWord(){
             List<string> words = new List<string>{
                 "which",
                 "there",
@@ -33,23 +34,22 @@ namespace Unit3.Game{
                 };
             var random = new Random();
             int index = random.Next(words.Count);
-            setSelectedWord(words[index]);
+            return setSelectedWord(words[index]);
         }
         public void getSelectedWord(){
             Console.WriteLine(selectedWord);
         }
 
-        public bool checkUserInput(char userInput){
+        public bool checkUserInput(char userInput, string selectedWord){
             Display dis = new Display();
             if (selectedWord.Contains(userInput)){
-                int wordIndex = selectedWord.IndexOf(userInput);
-                dis.setWordList(wordIndex, selectedWord[wordIndex]);
-                dis.displayDude();
                 return true;
             }else{
-                dis.displayDude();
                 return false;
+                
             }
+            
+            
         }
     }
 }
