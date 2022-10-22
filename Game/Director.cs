@@ -13,6 +13,7 @@ namespace Unit3.Game{
                         display.winDisplay();
                     }else if (display.getCharList() != keyword && jumper.getLifePoints() == 0){
                         jumper.setLifePoints(-1);
+                        Console.WriteLine("Sorry you died!");
                         display.displayDude(0);
                     }else{
                         display.displayDude(jumper.getLifePoints());
