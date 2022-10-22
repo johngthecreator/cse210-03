@@ -13,6 +13,11 @@ namespace Unit3.Game{
             }
         }
 
+        public string getCharList(){
+          string charTotal = String.Join("",word);
+          return charTotal;
+        }
+
         public void winDisplay(){
             Console.WriteLine("You win!");
         }
@@ -106,16 +111,6 @@ namespace Unit3.Game{
                             / \     
                           ^^^^^^^");
                           break;
-                      
-                    // case 4:
-                    //       printWordList();
-                    //       Console.WriteLine(@"
-                    //           0
-                    //         / | \
-                    //         /  \
-                            
-                    //       ^^^^^^^");
-                    //           break;
 
                   }
           }

@@ -10,11 +10,9 @@ namespace Unit3.Game{
         public string selectRandomWord(){
             List<string> words = new List<string>{
                 "which",
-                "there",
                 "their",
                 "about",
                 "would",
-                "these",
                 "other",
                 "words",
                 "could",
@@ -22,15 +20,12 @@ namespace Unit3.Game{
                 "first",
                 "water",
                 "after",
-                "where",
                 "right",
                 "think",
-                "three",
                 "years",
                 "place",
                 "sound",
                 "great",
-                "again"
                 };
             var random = new Random();
             int index = random.Next(words.Count);
@@ -41,15 +36,12 @@ namespace Unit3.Game{
         }
 
         public bool checkUserInput(char userInput, string selectedWord){
-            Display dis = new Display();
             if (selectedWord.Contains(userInput)){
                 return true;
             }else{
                 return false;
                 
             }
-            
-            
         }
     }
 }
